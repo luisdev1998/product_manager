@@ -12,15 +12,14 @@ dotenv.config();
 
 connectDB();
 
-const domin = ["http://127.0.0.1:5500"];
+const domin = ["http://localhost:5173"];
 const corsOptions = {
     origin: function(origin,callback){
-        /*if(domin.indexOf(origin) !== -1){
+        if(domin.indexOf(origin) !== -1){
             callback(null,true);
         }else{
             callback(new Error('No permitido por cors'));
-        }*/
-        callback(null,true);
+        }
     }
 };
 app.use(cors(corsOptions));
