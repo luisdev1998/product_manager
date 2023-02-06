@@ -12,7 +12,7 @@ dotenv.config();
 
 connectDB();
 
-const domin = ["http://localhost:5173"];
+const domin = [process.env.LOCAL];
 const corsOptions = {
     origin: function(origin,callback){
         if(domin.indexOf(origin) !== -1){
